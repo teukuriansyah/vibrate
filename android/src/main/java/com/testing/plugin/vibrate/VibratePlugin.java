@@ -17,7 +17,7 @@ public class VibratePlugin extends Plugin {
 
   @PluginMethod
   public void turnOnVibrate(PluginCall call) {
-    long[] duration = {0,700,300,0,700,300,0,700,300,0,700,300,0,700,300,}
+    long[] duration = {0,700,300,0,700,300,0,700,300,0,700,300,0,700,300,};
     VibrationEffect.createWaveForm(duration,-1);
     JSObject ret = JSObject();
     ret.put("vibrate","On");
