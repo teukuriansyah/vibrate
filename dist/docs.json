@@ -1,0 +1,35 @@
+{
+  "api": {
+    "name": "VibratePlugin",
+    "slug": "vibrateplugin",
+    "docs": "",
+    "tags": [],
+    "methods": [
+      {
+        "name": "turnOnVibrate",
+        "signature": "() => Promise<{ vibrate: string; }>",
+        "parameters": [],
+        "returns": "Promise<{ vibrate: string; }>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "turnonvibrate"
+      },
+      {
+        "name": "turnOffVibrate",
+        "signature": "() => Promise<{ vibrate: string; }>",
+        "parameters": [],
+        "returns": "Promise<{ vibrate: string; }>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "turnoffvibrate"
+      }
+    ],
+    "properties": []
+  },
+  "interfaces": [],
+  "enums": [],
+  "typeAliases": [],
+  "pluginConfigs": []
+}

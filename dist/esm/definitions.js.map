@@ -1,0 +1,1 @@
+{"version":3,"file":"definitions.js","sourceRoot":"","sources":["../../src/definitions.ts"],"names":[],"mappings":"","sourcesContent":["export interface VibratePlugin {\n  turnOnVibrate(): Promise<{ vibrate: string }>;\n  turnOffVibrate(): Promise<{ vibrate: string }>;\n}\n"]}
