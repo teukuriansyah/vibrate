@@ -1,3 +1,4 @@
 export interface VibratePlugin {
-  echo(options: { value: string }): Promise<{ value: string }>;
+  turnOnVibrate(): Promise<{ vibrate: string }>;
+  turnOffVibrate(): Promise<{ vibrate: string }>;
 }

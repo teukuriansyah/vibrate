@@ -26,24 +26,32 @@ npx cap sync
 
 <docgen-index>
 
-* [`echo(...)`](#echo)
+* [`turnOnVibrate()`](#turnonvibrate)
+* [`turnOffVibrate()`](#turnoffvibrate)
 
 </docgen-index>
 
 <docgen-api>
 <!--Update the source file JSDoc comments and rerun docgen to update the docs below-->
 
-### echo(...)
+### turnOnVibrate()
 
 ```typescript
-echo(options: { value: string; }) => Promise<{ value: string; }>
+turnOnVibrate() => Promise<{ vibrate: string; }>
 ```
 
-| Param         | Type                            |
-| ------------- | ------------------------------- |
-| **`options`** | <code>{ value: string; }</code> |
+**Returns:** <code>Promise&lt;{ vibrate: string; }&gt;</code>
 
-**Returns:** <code>Promise&lt;{ value: string; }&gt;</code>
+--------------------
+
+
+### turnOffVibrate()
+
+```typescript
+turnOffVibrate() => Promise<{ vibrate: string; }>
+```
+
+**Returns:** <code>Promise&lt;{ vibrate: string; }&gt;</code>
 
 --------------------
 
