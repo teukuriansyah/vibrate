@@ -20,9 +20,10 @@ public class VibratePlugin extends Plugin {
   public void turnOnVibrate(PluginCall call) {
     long[] duration = {0,700,300,0,700,300,0,700,300,0,700,300,0,700,300,};
 
-    Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+    Context context = getContext();
+    Vibrator vibrator = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-  vibrator.vibrate(VibrationEffect.createWaveForm(duration,-1));
+  vibrator.vibrate(VibrationEffect.createWaveform(duration,-1));
 } 
     JSObject ret = new JSObject();
     ret.put("vibrate","On");
@@ -31,8 +32,8 @@ if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
 
   @PluginMethod
   public void turnOffVibrate(PluginCall call) {
-    
-    Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+    Context context = getContext();
+    Vibrator vibrator = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
 
     vibrator.cancel();
 
