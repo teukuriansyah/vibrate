@@ -6,6 +6,7 @@ import com.getcapacitor.PluginCall;
 import android.os.Vibrator;
 import android.os.VibrationEffect;
 import android.content.Context;
+import android.os.Build;
 import android.os.VibratorManager;
 import com.getcapacitor.PluginMethod;
 import com.getcapacitor.annotation.CapacitorPlugin;
@@ -30,13 +31,10 @@ if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
 
   @PluginMethod
   public void turnOffVibrate(PluginCall call) {
-    VibratorManager vibratorManager = (VibratorManager) getSystemService(Context.VIBRATOR_MANAGER_SERVICE);
-
-    if (vibratorManager != null) {
-      Vibrator vibrator = vibratorManager.getDefaultVibrator();
     
-      vibrator.cancel();
-    }
+    Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+
+    vibrator.cancel();
 
     JSObject ret = new JSObject();
     ret.put("vibrate","Off");
